@@ -5,9 +5,13 @@ function Bmi() {
     const[weight,setWeight]=useState(0);
     const[Bmi,setBmi]=useState('');
     const calculateBmi=()=>{
+      if(height>0 && weight>0){
         let h=height/100;
        let divid=(weight/(h*h)).toFixed(2);
-        setBmi(divid);
+        setBmi(divid);}
+        else{
+          alert('Please enter a valid number');
+        }
     }
   return (
     <div className='bmi-box'>
